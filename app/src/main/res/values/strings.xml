@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">UT Kiosk</string>
+    <string name="bottom_right">Mahindra &amp; Mahindra - Chakan</string>
+    <string name="bottom_left">Powered By Kemar Port Automation Pvt. Ltd.</string>
+
+    <string name="selected_item">Selected item:</string>
+
+    <!--  <string-array name="Languages">
+        <item>Select Reason</item>
+        <item>Breakdown of dock levelers</item>
+        <item>Breakdown of MHE\'s</item>
+        <item>In adequate MLL Manpower</item>
+        <item>In adequate Matadi\'s</item>
+        <item>Shortage / Excess material</item>
+        <item>Vehicle (Truck) break down at dock.</item>
+        <item>Non availability of Security (to check empty packaging)</item>
+        <item>Due to reportable accident</item>
+        <item>Because of stoppage of production due some reason</item>
+        <item>Shortage of storage space at shop</item>
+        <item>Lunch hours/Tea hours &amp; bio break</item>
+        <item>Empty packagings were not stored at designated place.</item>
+        <item>Others (To be manually recorded)</item>
+    </string-array> -->
+    <string-array name="Languages">
+        <item>चयन करें (Select Reason)</item>
+        <item>डॉक लेवलर्स का ब्रेकडाउन</item>
+        <item>MHE\'s का ब्रेकडाउन</item>
+        <item>अपर्याप्त MLL मानवशक्ति</item>
+        <item>अपर्याप्त माटाड़ी</item>
+        <item>सामग्री की कमी / अधिशेष</item>
+        <item>डॉक पर वाहन (ट्रक) का ब्रेकडाउन।</item>
+        <item>सुरक्षा कर्मी की अनुपस्थिति (खाली पैकेजिंग की जांच करने के लिए)</item>
+        <item>दुर्घटना का कारण</item>
+        <item>किसी कारणवश प्रोडक्शन की रुकावट के कारण</item>
+        <item>शॉप में रखने के लिए स्टोरेज स्थान की कमी</item>
+        <item>विश्राम</item>
+        <item>खाली पैकेजिंग को निर्धारित स्थान पर नहीं रखा गया था।</item>
+        <item>अन्य</item>
+    </string-array>
+    <string-array name="leveler">
+        <item>Select Leveler</item>
+        <item>Leveler 1A</item>
+        <item>Leveler 2A</item>
+        <item>Leveler 3B</item>
+        <item>Leveler 4B</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="medium_text">16sp</dimen>
+    <dimen name="large_text">18sp</dimen>
+    <dimen name="heading">20sp</dimen>
+    <dimen name="sub_heading">18sp</dimen>
+    <dimen name="button">15sp</dimen>
+    <dimen name="text_big_size_1">25sp</dimen>
+    <dimen name="text_big_size_2">20sp</dimen>
+
+
+
+
+</resources>

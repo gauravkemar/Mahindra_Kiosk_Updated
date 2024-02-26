@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintHorizontal_weight="0.40"
+                    app:layout_constraintEnd_toStartOf="@id/cl_middle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cl_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="20dp"
+                    app:layout_constraintHorizontal_weight="0.30"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/view2"
+                    app:layout_constraintStart_toEndOf="@id/view1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/blue"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/tv_dialogue_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:gravity="start"
+
+                                android:padding="10dp"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/large_text"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                            </TextView>
+
+                            <ImageButton
+                                android:id="@+id/close_dialogue_top_button"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="20dp"
+                                android:padding="10dp"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_white_close"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/cl_1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            >
+                            <TextView
+                                android:id="@+id/tv_Supervisor_TEXT"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/large_text"
+                                android:padding="30dp"
+                                android:textColor="@color/blue"
+                                android:textAlignment="center"
+                                android:text="Please Scan Supervisor ID"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@+id/tlFieldSupervisor"
+                                >
+
+                            </TextView>
+                            <EditText
+                                android:id="@+id/tlFieldSupervisor"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:visibility="visible"
+                                android:inputType="none"
+                                android:textColor="@color/white"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_Supervisor_TEXT"
+                                app:layout_constraintBottom_toTopOf="@+id/supervisor_check_btn"
+                                >
+                                <requestFocus/>
+                            </EditText>
+                       <!--     <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/tlField"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="20dp"
+                                app:hintTextAppearance="@style/CustomHintTextAppearance"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginRight="20dp"
+                                app:boxStrokeColor="@color/blue"
+                                android:hint=""
+                                android:inputType="none"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_Supervisor_TEXT"
+                                app:layout_constraintBottom_toTopOf="@+id/supervisor_check_btn">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edSupervisorField"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="text|textNoSuggestions"
+                                    android:paddingStart="12dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingEnd="4dp"
+                                    android:paddingBottom="12dp"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>-->
+
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/supervisor_check_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:padding="10dp"
+                                android:visibility="gone"
+                                android:backgroundTint="#664E73DF"
+                                android:background="@drawable/round_background"
+                                android:text="Submit"
+                                android:textAllCaps="false"
+                                android:textSize="20sp"
+                                app:cornerRadius="10dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tlFieldSupervisor"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintHorizontal_weight="0.40"
+                    app:layout_constraintStart_toEndOf="@id/cl_middle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>
+

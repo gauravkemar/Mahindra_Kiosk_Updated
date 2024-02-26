@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="0dp"
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        tools:ignore="UnusedAttribute">
+        <rotate
+            android:fromDegrees="50"
+            android:pivotX="10%"
+            android:pivotY="-80%">
+            <shape
+                android:shape="rectangle">
+                <solid
+                    android:color="@color/blue"/>
+            </shape>
+        </rotate>
+    </item>
+</layer-list>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#A39F9F"
+                android:centerColor="#FFFF"
+                android:endColor="#C5C1C1"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="-160dp"
+        android:top="-160dp">
+        <rotate
+            android:fromDegrees="10"
+            android:toDegrees="-29.5"
+            android:pivotX="0%"
+            android:pivotY="0%"
+            >
+            <inset
+                android:insetTop="-2dp"
+                android:insetBottom="-2dp"
+                android:insetLeft="-2dp"
+
+                >
+                <shape
+                    android:shape="rectangle" >
+
+                    <solid
+                        android:color="@android:color/white" />
+                  <!--  <stroke android:width="5dp" android:color="@color/blue"/>-->
+                    <gradient android:startColor="#A39F9F"
+                        android:centerColor="#FFFF"
+                        android:endColor="#C5C1C1"/>
+                </shape>
+            </inset>
+
+        </rotate>
+    </item>
+</layer-list>
+

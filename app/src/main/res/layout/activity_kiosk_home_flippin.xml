@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/home_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clParentTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:cardElevation="20dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="0.10">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_weight="0.10">
+
+
+                        <ImageView
+                            android:id="@+id/mahindra_ut_id"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/logo_latest"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/supervisor_name_time_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/supervisor_name_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+                            app:layout_constraintStart_toEndOf="@id/mahindra_ut_id"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_supervisor_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="Mayur Salunkhe"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/medium_text"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/tv_date_time"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed" />
+
+                            <TextView
+                                android:id="@+id/tv_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="28-06-2023 11:30AM"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/medium_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_supervisor_name" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/logout_btn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/round_border_blue"
+                            android:clickable="true"
+                            android:padding="8dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue"
+                            app:cardCornerRadius="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/round_border_blue"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_log_out_black" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/settings_btn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginEnd="20dp"
+                            android:background="@drawable/round_border_blue"
+                            android:clickable="true"
+                            android:padding="8dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/blue"
+                            app:cardCornerRadius="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/clDock"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="SpeakableTextPresentCheck">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/round_border_blue"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_settings_blue" />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clDock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/curve_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_dock_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:minWidth="100dp"
+                                android:paddingStart="40dp"
+                                android:paddingEnd="40dp"
+                                android:text="Dock 11"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_big_size_1"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/dock_white_dash"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/dock_white_dash"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="#FFF"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:minWidth="100dp"
+                                android:text="Shop R"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_big_size_2"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/dock_white_dash"
+
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clParentMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clParentBottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clParentTop"
+                    app:layout_constraintVertical_weight="0.85">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_truck_list"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cardview_right"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ut_symbol" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_child_left_1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cv_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardUseCompatPadding="false"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_child_left_1_1_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/blue"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:paddingBottom="5dp">
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/mcv_dock_queue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:clickable="true"
+                                        app:cardCornerRadius="20dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/mcv_dock_parking"
+                                        app:layout_constraintHorizontal_weight="0.30"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_dock_queue_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="start"
+                                                android:layout_margin="5dp"
+                                                android:background="@drawable/left_round_bg"
+                                                android:includeFontPadding="false"
+                                                android:paddingStart="10dp"
+                                                android:paddingTop="5dp"
+                                                android:paddingEnd="10dp"
+                                                android:paddingBottom="5dp"
+                                                android:text="0"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <TextView
+                                                android:id="@+id/tv_dock_queue"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end"
+                                                android:includeFontPadding="false"
+                                                android:padding="10dp"
+                                                android:text="Dock Queue"
+                                                android:textColor="@color/blue"
+                                                android:textSize="@dimen/button"
+                                                android:textStyle="bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toEndOf="@+id/tv_dock_queue_count"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/mcv_dock_parking"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:clickable="true"
+                                        app:cardCornerRadius="20dp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/cl_search"
+                                        app:layout_constraintHorizontal_weight="0.30"
+                                        app:layout_constraintStart_toEndOf="@+id/mcv_dock_queue"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/tv_dock_suplier_name"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:includeFontPadding="false"
+                                                android:padding="10dp"
+                                                android:text="Parking Queue"
+                                                android:textColor="@color/blue"
+                                                android:textSize="@dimen/button"
+                                                android:textStyle="bold"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toStartOf="@+id/tv_dock_suplier_name_count"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <TextView
+                                                android:id="@+id/tv_dock_suplier_name_count"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="5dp"
+                                                android:background="@drawable/right_round_bg"
+                                                android:gravity="center"
+                                                android:includeFontPadding="false"
+                                                android:paddingStart="10dp"
+                                                android:paddingTop="5dp"
+                                                android:paddingEnd="10dp"
+                                                android:paddingBottom="5dp"
+                                                android:text="0"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold"
+
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                    </com.google.android.material.card.MaterialCardView>
+
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/cl_search"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginEnd="15dp"
+                                        android:background="@drawable/round_border_white"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_weight="0.4"
+                                        app:layout_constraintStart_toEndOf="@+id/mcv_dock_parking"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <EditText
+                                            android:id="@+id/ed_search"
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginStart="10dp"
+                                            android:layout_marginEnd="10dp"
+                                            android:background="@null"
+                                            android:hint="Search"
+                                            android:inputType="text|textNoSuggestions"
+                                            android:lines="1"
+                                            android:maxLines="1"
+                                            android:paddingStart="20dp"
+                                            android:paddingTop="5dp"
+                                            android:paddingBottom="5dp"
+                                            android:textColor="@color/white"
+                                            android:textColorHint="@color/white"
+                                            android:textSize="@dimen/medium_text"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@+id/search_btn"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <ImageView
+                                            android:id="@+id/search_btn"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:padding="10dp"
+                                            android:src="@drawable/ic_magnifier"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/blue"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@id/ed_search"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/dock_queue_rc"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cv_header"
+                                tools:itemCount="5"
+                                tools:listitem="@layout/home_dock_item_layout" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/parking_queue_rc"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cv_header"
+                                tools:itemCount="5"
+                                tools:listitem="@layout/home_dock_item_layout" />
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/manual_dock_reporting_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                >
+                                <TextView
+                                    android:id="@+id/dock_reporting_btn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+                                    android:text="Dock Reporting"
+                                    android:textColor="@color/white"
+                                    android:background="@drawable/dock_btn_shape"
+                                    />
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview_right_back_side"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="15dp"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintStart_toEndOf="@id/cv_truck_list"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ut_symbol" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvVehicleDetailsChild"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="5dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/clVehicleImgs"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/clDetails1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/cl_truck"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/grey_gradient_bg"
+                                            android:paddingTop="5dp"
+                                            android:paddingBottom="5dp"
+                                            app:layout_constraintEnd_toStartOf="@id/tv_truck"
+                                            app:layout_constraintHorizontal_weight="0.2"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <ImageView
+                                                android:id="@+id/img_truck"
+                                                android:layout_width="32dp"
+                                                android:layout_height="32dp"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerInside"
+                                                android:src="@drawable/truck"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <TextView
+                                            android:id="@+id/tv_truck"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:paddingStart="20dp"
+                                            android:text="MH04AB1234"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            app:layout_constraintBottom_toBottomOf="@id/cl_truck"
+                                            app:layout_constraintEnd_toStartOf="@+id/img_chennal"
+                                            app:layout_constraintHorizontal_weight="0.7"
+                                            app:layout_constraintStart_toEndOf="@id/cl_truck"
+                                            app:layout_constraintTop_toTopOf="@id/cl_truck" />
+
+                                        <ImageView
+                                            android:id="@+id/img_chennal"
+                                            android:layout_width="0dp"
+                                            android:layout_height="30dp"
+                                            android:adjustViewBounds="true"
+                                            android:scaleType="centerInside"
+                                            android:src="@drawable/ic_green_channel"
+                                            android:visibility="visible"
+                                            app:layout_constraintBottom_toBottomOf="@+id/tv_truck"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_weight="0.1"
+                                            app:layout_constraintStart_toEndOf="@+id/tv_truck"
+                                            app:layout_constraintTop_toTopOf="@id/tv_truck"
+
+
+                                            />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <View
+                                        android:id="@+id/view1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#AAABAE"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/clDetails1" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/clDetails2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/view1">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/cl_vendor"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/grey_gradient_bg"
+                                            android:paddingTop="7dp"
+                                            android:paddingBottom="7dp"
+                                            app:layout_constraintEnd_toStartOf="@id/tv_supplier"
+                                            app:layout_constraintHorizontal_weight="0.2"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <ImageView
+                                                android:id="@+id/img_vindor"
+                                                android:layout_width="28dp"
+                                                android:layout_height="28dp"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerInside"
+                                                android:src="@drawable/vindor"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <TextView
+                                            android:id="@+id/tv_supplier"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:paddingStart="20dp"
+                                            android:text="Harshada Enterprise"
+                                            android:textColor="@color/black"
+                                            android:textSize="18sp"
+                                            app:layout_constraintBottom_toBottomOf="@id/cl_vendor"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_weight="0.8"
+                                            app:layout_constraintStart_toEndOf="@id/cl_vendor"
+                                            app:layout_constraintTop_toTopOf="@id/cl_vendor" />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    <View
+                                        android:id="@+id/view2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:background="#AAABAE"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/clDetails2" />
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:id="@+id/clDetails3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/view2">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:id="@+id/cl_report_time"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/grey_gradient_bg"
+                                            android:paddingTop="7dp"
+                                            android:paddingBottom="7dp"
+                                            app:layout_constraintEnd_toStartOf="@id/tv_report_time"
+                                            app:layout_constraintHorizontal_weight="0.2"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent">
+
+                                            <ImageView
+                                                android:id="@+id/img_report_time"
+                                                android:layout_width="28dp"
+                                                android:layout_height="28dp"
+                                                android:adjustViewBounds="true"
+                                                android:scaleType="centerInside"
+                                                android:src="@drawable/time"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                        <TextView
+                                            android:id="@+id/tv_report_time"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:paddingStart="20dp"
+                                            android:text="05:22pm(35 mins)"
+                                            android:textColor="@color/black"
+                                            android:textSize="18sp"
+                                            app:layout_constraintBottom_toBottomOf="@id/cl_report_time"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_weight="0.8"
+                                            app:layout_constraintStart_toEndOf="@id/cl_report_time"
+                                            app:layout_constraintTop_toTopOf="@id/cl_report_time" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/button_toggle_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/round_border_blue"
+                                app:cardUseCompatPadding="false"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cvVehicleDetailsChild">
+
+                                <RadioGroup
+                                    android:id="@+id/button_toggle_group1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/round_border_blue"
+                                    android:orientation="horizontal"
+                                    android:padding="2dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <RadioButton
+                                        android:id="@+id/unloading_start_btn1"
+                                        style="@style/RadioButtonStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/radio_btn_selector_left"
+                                        android:button="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="Start Unloading"
+                                        android:textColor="@drawable/radiobuttonstate"
+                                        android:textSize="@dimen/button" />
+
+                                    <RadioButton
+                                        android:id="@+id/unloading_start_btn2"
+                                        style="@style/RadioButtonStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/radio_btn_selector"
+                                        android:button="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="Skip and Forward"
+                                        android:textColor="@drawable/radiobuttonstate"
+                                        android:textSize="@dimen/button" />
+
+                                    <RadioButton
+                                        android:id="@+id/unloading_start_btn3"
+                                        style="@style/RadioButtonStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/radio_btn_selector_right"
+                                        android:button="@android:color/transparent"
+                                        android:gravity="center"
+                                        android:text="Return to Parking "
+                                        android:textColor="@drawable/radiobuttonstate"
+                                        android:textSize="@dimen/button" />
+
+                                </RadioGroup>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clLeveler"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/round_border_blue"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/button_toggle_group">
+
+                                <Spinner
+                                    android:id="@+id/spinnerApp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:drawableEnd="@drawable/ic_spinner_arrow_blue"
+                                    android:gravity="center"
+                                    android:paddingStart="5dp"
+                                    android:spinnerMode="dropdown"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/img_spinner_arrow"
+                                    app:layout_constraintHorizontal_weight="0.60"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/img_spinner_arrow"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_spinner_arrow_blue"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_weight="0.10"
+                                    app:layout_constraintStart_toEndOf="@+id/spinnerApp"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cancel_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:layout_marginEnd="20dp"
+                                android:clickable="true"
+                                android:padding="8dp"
+                                app:cardCornerRadius="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/submit_btn"
+                                app:layout_constraintTop_toBottomOf="@+id/clLeveler"
+                                tools:ignore="SpeakableTextPresentCheck">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/round_border_black"
+                                    android:gravity="center"
+                                    android:padding="10dp"
+                                    android:paddingStart="40dp"
+                                    android:paddingTop="12dp"
+                                    android:paddingEnd="40dp"
+                                    android:paddingBottom="12dp"
+
+                                    android:text="Cancel"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+
+                                    />
+                            </com.google.android.material.card.MaterialCardView>
+                            <!-- <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/cancel_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="20dp"
+                                android:background="@drawable/round_border_blue"
+                                android:backgroundTint="@color/grey"
+                                android:paddingStart="40dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="40dp"
+                                android:paddingBottom="10dp"
+                                android:text="Cancel"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/button"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/submit_btn"
+                                app:layout_constraintTop_toBottomOf="@+id/clLeveler" />-->
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/submit_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="20dp"
+                                android:backgroundTint="@color/green"
+                                android:paddingStart="40dp"
+                                android:paddingTop="10dp"
+                                android:paddingEnd="40dp"
+                                android:paddingBottom="10dp"
+                                android:text="Submit"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/button"
+                                android:textStyle="bold"
+                                app:cornerRadius="5dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/clLeveler" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview_right"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="15dp"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintStart_toEndOf="@id/cv_truck_list"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ut_symbol" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cl_indicator"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/leveler_rc"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_weight="0.07">
+
+                                <ImageView
+                                    android:id="@+id/imv_green_channel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:background="@drawable/blue_ball"
+                                    android:padding="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_green_channel"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_green_channel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:padding="10dp"
+                                    android:text="Green Channel"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/small_text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@id/imv_available"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imv_available"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/green_ball"
+                                    android:padding="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_available"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_available"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:padding="10dp"
+                                    android:text="Available"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/small_text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/imv_occupied"
+
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imv_occupied"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/orange_ball"
+                                    android:padding="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_occupied"
+
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_occupied"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:padding="10dp"
+                                    android:text="Occupied"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/small_text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/imv_over_time"
+
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/imv_over_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/red_ball"
+                                    android:padding="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_over_time"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/tv_over_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="10dp"
+                                    android:includeFontPadding="false"
+                                    android:padding="10dp"
+                                    android:text="Time Over"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/small_text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:id="@+id/cl_indicator_view"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:background="@color/lighter_grey"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/leveler_rc"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:paddingTop="10dp"
+                                app:layout_constraintBottom_toTopOf="@id/cl_rgp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/cl_indicator"
+                                app:layout_constraintVertical_weight="0.73"
+                                tools:itemCount="5"
+                                tools:listitem="@layout/home_leveler_item_layout">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cl_rgp"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/leveler_rc"
+                                app:layout_constraintVertical_weight="0.2">
+
+                                <View
+                                    android:id="@+id/cl_right_view1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:background="@drawable/home_rpg_tv_gradient_left"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_rgp"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_rgp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/tv_rgp" />
+
+                                <TextView
+                                    android:id="@+id/tv_rgp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="RGP Loading (0)"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/sub_heading"
+                                    app:layout_constraintEnd_toStartOf="@+id/cl_right_view2"
+                                    app:layout_constraintStart_toEndOf="@id/cl_right_view1"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:id="@+id/cl_right_view2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    android:background="@drawable/home_rpg_tv_gradient_right"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_rgp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/tv_rgp"
+                                    app:layout_constraintTop_toTopOf="@id/tv_rgp" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rc_rgp"
+                                    android:layout_width="0dp"
+                                    android:layout_height="0dp"
+                                    android:layout_marginBottom="10dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_rgp"
+                                    tools:listitem="@layout/rgp_list_item_layout" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clParentBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bottom_left"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/small_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

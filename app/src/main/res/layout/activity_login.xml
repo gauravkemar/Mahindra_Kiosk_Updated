@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/login_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/login"
+            >
+            <TextView
+                android:id="@+id/tv_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERSION V1.0"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/login_version_blue_border"
+                android:textSize="@dimen/large_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintHorizontal_weight="0.30"
+                        app:layout_constraintEnd_toStartOf="@id/cardview_left"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginBottom="-10dp"
+                        app:layout_constraintBottom_toTopOf="@+id/cardview_left"
+                        app:layout_constraintEnd_toStartOf="@id/view2"
+                        android:background="@drawable/top_left_right_corner_round_blue"
+                        >
+                        <TextView
+                            android:id="@+id/tv_dock_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DOCK"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/large_text"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/viewLine"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                        <View
+                            android:id="@+id/viewLine"
+                            android:layout_width="2dp"
+                            android:layout_height="0dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:background="@color/white"
+                            app:layout_constraintStart_toEndOf="@+id/tv_dock_id"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_shop_id"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/tv_shop_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:text="DOCK"
+                            android:textSize="@dimen/large_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/viewLine"
+                            />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview_left"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="30dp"
+                        app:layout_constraintHorizontal_weight="0.40"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/view2"
+                        app:layout_constraintStart_toEndOf="@id/view1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/logo"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/login_header"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/username_card"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:background="@color/white"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:cardUseCompatPadding="true"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/logo">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/main"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:background="@color/orange"
+                                        android:padding="12dp"
+                                        android:src="@drawable/ic_user_login"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edittext_username"
+                                        android:layout_width="0dp"
+                                        android:layout_height="50dp"
+                                        android:paddingStart="15dp"
+                                        android:textColorHint="#8E8F8F"
+                                        android:lines="1"
+                                        android:maxLines="1"
+                                        android:inputType="text|textNoSuggestions"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/rfid_scan"
+                                        app:layout_constraintStart_toEndOf="@+id/main"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:background="@color/white"
+                                        android:hint="User Name" />
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/rfid_scan"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:padding="10dp"
+                                        android:background="@color/lighter_grey_50"
+                                        android:src="@drawable/rfid"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/password_card"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="15dp"
+                                android:background="@color/white"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:cardUseCompatPadding="true"
+                                app:layout_constraintTop_toBottomOf="@+id/username_card"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/key"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:background="@color/orange"
+                                        android:padding="12dp"
+                                        android:src="@drawable/key"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/edit_text_password"
+                                        android:layout_width="0dp"
+                                        android:layout_height="50dp"
+                                        android:paddingStart="15dp"
+                                        android:textColorHint="#8E8F8F"
+                                        android:lines="1"
+                                        android:maxLines="1"
+                                        android:inputType="textPassword|textNoSuggestions"
+                                        app:layout_constraintEnd_toStartOf="@+id/button_password_toggle"
+                                        app:layout_constraintStart_toEndOf="@id/key"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        android:background="@color/white"
+                                        android:hint="Password" />
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/button_password_toggle"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:padding="10dp"
+                                        android:background="@color/lighter_grey_50"
+                                        android:src="@drawable/ic_visibility_off"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <!--  <com.google.android.material.textfield.TextInputEditText
+                                          android:id="@+id/edPass"
+                                          android:layout_width="0dp"
+                                          android:layout_height="50dp"
+                                          android:paddingStart="15dp"
+                                          android:textColorHint="@color/grey"
+                                          android:background="@color/white"
+                                          android:hint="Password"
+                                          app:layout_constraintBottom_toBottomOf="parent"
+                                          app:layout_constraintEnd_toEndOf="parent"
+                                          app:layout_constraintStart_toEndOf="@id/key"
+                                          app:layout_constraintTop_toTopOf="parent"
+                                          app:passwordToggleEnabled="true"/>-->
+
+
+                                    <!--<com.google.android.material.textfield.TextInputLayout
+                                        android:id="@+id/tlPass"
+                                        android:layout_width="0dp"
+                                        android:layout_height="50dp"
+                                        android:layout_gravity="center"
+                                        android:textColorHint="@color/grey"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/key"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:passwordToggleEnabled="true">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/edPass"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:hint="Password"
+                                            android:background="@color/white"
+                                            android:inputType="textPassword|textNoSuggestions"
+                                            android:paddingStart="15dp"
+                                            android:textColor="@color/black"
+                                            android:textSize="18sp" />
+
+                                    </com.google.android.material.textfield.TextInputLayout>-->
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/login_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:padding="10dp"
+                                android:includeFontPadding="false"
+                                android:backgroundTint="#664E73DF"
+                                android:background="@drawable/round_background"
+                                android:text="Login"
+                                android:textAllCaps="false"
+                                android:textSize="20sp"
+                                app:cornerRadius="10dp"
+                                app:layout_constraintStart_toEndOf="@+id/clear_btn"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/password_card"/>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/clear_btn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="20dp"
+                                android:padding="10dp"
+                                android:includeFontPadding="false"
+                                android:backgroundTint="#664E73DF"
+                                android:background="@drawable/round_background"
+                                android:text="Clear"
+                                android:textAllCaps="false"
+                                android:textSize="20sp"
+                                app:cornerRadius="10dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/login_btn"
+                                app:layout_constraintTop_toBottomOf="@+id/password_card"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="center"
+                                android:text="@string/bottom_left"
+                                android:textColor="@color/light_grey"
+                                android:textSize="12sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        app:layout_constraintHorizontal_weight="0.30"
+                        app:layout_constraintStart_toEndOf="@id/cardview_left"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</layout>

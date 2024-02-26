@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="10dp"
+        android:clickable="true"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clLeftMain"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/clEnd"
+                    app:layout_constraintHorizontal_weight="0.65"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/lighter_green"
+                        app:cardUseCompatPadding="false">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clStart"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/green"
+                                android:padding="16dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@id/clMiddle"
+                                app:layout_constraintHorizontal_weight="0.15"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/tv_leveler"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:includeFontPadding="false"
+                                    android:letterSpacing="0.05"
+                                    android:lines="1"
+                                    android:text="Leveler 1A"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/medium_text"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clMiddle"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/demo_drawable"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_weight="0.3"
+                                app:layout_constraintStart_toEndOf="@id/clStart"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/ic_truck"
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    android:paddingTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:src="@drawable/ic_truck"
+                                    app:layout_constraintBottom_toBottomOf="@id/tv_vehicle_no"
+                                    app:layout_constraintEnd_toStartOf="@id/tv_vehicle_no"
+                                    app:layout_constraintHorizontal_chainStyle="packed"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="@id/tv_vehicle_no" />
+
+                                <TextView
+                                    android:id="@+id/tv_vehicle_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:letterSpacing="0.05"
+                                    android:text=""
+                                    android:paddingTop="5dp"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/medium_text"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toTopOf="@+id/tv_supervisor"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@id/ic_truck"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_chainStyle="spread" />
+
+                                <TextView
+                                    android:id="@+id/tv_supervisor"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:letterSpacing="0.05"
+                                    android:paddingBottom="5dp"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp"
+                                    android:text="Pradyumn Enterprises"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/medium_text"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/tv_vehicle_no" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clEnd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="0.35"
+                    app:layout_constraintStart_toEndOf="@id/clLeftMain"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_contractors"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text=""
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/medium_text"
+                            app:layout_constraintBottom_toTopOf="@id/tv_timer"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread" />
+
+                        <TextView
+                            android:id="@+id/tv_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/small_text"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/tv_contractors"
+                            app:layout_constraintStart_toStartOf="@+id/tv_contractors"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_contractors" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          <!--  <ProgressBar
+                android:id="@+id/my_progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:progressDrawable="@drawable/linear_progress_drawable"
+                app:layout_constraintBottom_toBottomOf="parent" />-->
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+    <!--<com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardview_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clLeftMain"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_weight="0.65"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/clEnd"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/lighter_green"
+                    app:cardUseCompatPadding="false">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clStart"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:padding="11dp"
+                            android:background="@drawable/green_card_view"
+                            app:layout_constraintHorizontal_weight="0.15"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/clMiddle"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_leveler"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:lines="1"
+                                android:gravity="center"
+                                android:letterSpacing="0.05"
+                                android:includeFontPadding="false"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:text="Leveler 1A"
+                                android:textStyle="bold"
+                                android:textColor="@color/white"
+                                android:textSize="19sp"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clMiddle"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/demo_drawable"
+                            app:layout_constraintHorizontal_weight="0.3"
+                            app:layout_constraintStart_toEndOf="@id/clStart"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <ImageView
+                                android:id="@+id/ic_truck"
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_truck"
+                                android:layout_marginEnd="10dp"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/tv_vehicle_no"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_vehicle_no"
+                                app:layout_constraintEnd_toStartOf="@id/tv_vehicle_no"
+                                />
+                            <TextView
+                                android:id="@+id/tv_vehicle_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:includeFontPadding="false"
+                                app:layout_constraintStart_toEndOf="@id/ic_truck"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toTopOf="@+id/tv_contractor"
+                                app:layout_constraintVertical_chainStyle="spread"
+                                android:text="MH04DK1876"
+                                android:letterSpacing="0.05"
+                                android:textColor="@color/blue"
+                                android:textStyle="bold"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_contractor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pradyumn Enterprises"
+                                android:includeFontPadding="false"
+                                android:textColor="@color/blue"
+                                android:textSize="17sp"
+                                android:letterSpacing="0.05"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_vehicle_no"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                 />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clEnd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintHorizontal_weight="0.35"
+                app:layout_constraintStart_toEndOf="@id/clLeftMain"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+                    <TextView
+                        android:id="@+id/tv_contractors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unloading Started"
+                        android:includeFontPadding="false"
+                        app:layout_constraintVertical_chainStyle="spread"
+                        android:textColor="@color/blue"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/tv_timer"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <TextView
+                        android:id="@+id/tv_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:50 am"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:includeFontPadding="false"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_contractors"
+                        app:layout_constraintStart_toStartOf="@+id/tv_contractors"
+                        app:layout_constraintEnd_toEndOf="@id/tv_contractors"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+               &lt;!&ndash; <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/circle_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="38\n Mins"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="9sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar"
+                        style="@style/CircularDeterminateProgressBar"
+                        android:layout_width="70dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_height="55dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:progress="70" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;
+
+
+              &lt;!&ndash;  <TextView
+                    android:id="@+id/tv_contractors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ashok Enterprises"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="27sp"
+                    app:layout_constraintStart_toEndOf="@id/ic_user"
+                    app:layout_constraintBottom_toTopOf="@id/tv_time"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_contractor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_contractor"
+                    android:text="10:50 am (35 mins)"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"/>
+
+                <ImageView
+                    android:id="@+id/ic_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_contractor"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_contractor"
+                    app:layout_constraintEnd_toStartOf="@id/tv_contractor"/>
+                <ImageView
+                    android:id="@+id/ic_watch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_watch"
+                    app:layout_constraintEnd_toEndOf="@id/ic_user"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_time"
+                    app:layout_constraintTop_toTopOf="@id/tv_time"
+                    app:layout_constraintStart_toStartOf="@id/ic_user"/>&ndash;&gt;
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        &lt;!&ndash;<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="end">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/tv_contractor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ashok Enterprises"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toTopOf="@id/tv_time"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:textSize="30sp"/>
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/tv_contractor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:text="10:50 am (35 mins)"
+                        android:textColor="@color/black"
+                        android:textSize="30sp"/>
+
+                    <ImageView
+                        android:id="@+id/ic_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_user"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginBottom="5dp"/>
+                    <ImageView
+                        android:id="@+id/ic_watch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_watch"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="5dp"/>
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </FrameLayout>&ndash;&gt;
+
+    </com.google.android.material.card.MaterialCardView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

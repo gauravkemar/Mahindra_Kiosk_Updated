@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.KioskHomeActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            tools:context=".MainActivity">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/clParentTop"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:cardElevation="20dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="0.10">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="0.10">
+
+
+                    <ImageView
+                        android:id="@+id/mahindra_ut_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/actionbar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/supervisor_name_time_tv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/supervisor_name_time_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+                        app:layout_constraintStart_toEndOf="@id/mahindra_ut_id"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_supervisor_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="Mayur Salunkhe"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/tv_date_time"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <TextView
+                            android:id="@+id/tv_date_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:text="28-06-2023 11:30AM"
+                            android:textColor="@color/grey"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_supervisor_name" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/login_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:backgroundTint="@color/green"
+                        android:drawableLeft="@drawable/ic_person_white"
+                        android:includeFontPadding="false"
+                        android:text="Login"
+                        android:textSize="22sp"
+                        app:cornerRadius="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/logout_btn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/round_border_blue"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck" >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:background="@drawable/round_border_blue"
+                            android:src="@drawable/ic_log_out_black"
+                            />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!--<androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/logout_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/ic_log_out_black"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck" />-->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/settings_btn"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/round_border_blue"
+                        android:padding="8dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/blue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/clDock"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck" >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:background="@drawable/round_border_blue"
+                            android:src="@drawable/ic_settings_blue"
+                            />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clDock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/curve_header"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/tv_dock_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="100dp"
+                            android:paddingStart="40dp"
+                            android:paddingEnd="40dp"
+                            android:text="Dock 11"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/dock_white_dash"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <View
+                            android:id="@+id/dock_white_dash"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:background="#FFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_shop_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:minWidth="100dp"
+                            android:text="Shop R"
+                            android:textColor="@color/white"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/dock_white_dash"
+
+                            />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clParentMiddle"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/clParentBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clParentTop"
+                app:layout_constraintVertical_weight="0.85">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cv_truck_list"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintEnd_toStartOf="@id/cardview_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cl_child_left_1_1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/ut_symbol"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cv_header"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="5dp"
+                            app:cardUseCompatPadding="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/cl_child_left_1_1_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/blue"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingEnd="5dp"
+                                android:paddingBottom="5dp">
+
+                                <TextView
+                                    android:id="@+id/tv_dock_queue"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    android:text="Dock Queue (5)"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintHorizontal_weight="0.25"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/tv_dock_suplier_name"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/tv_dock_suplier_name"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:includeFontPadding="false"
+                                    android:text="Parking Queue (20)"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    app:layout_constraintHorizontal_weight="0.25"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintEnd_toStartOf="@id/cl_search"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/tv_dock_queue"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/cl_search"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="10dp"
+                                    app:layout_constraintHorizontal_weight="0.5"
+                                    android:background="@drawable/round_border_white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/tv_dock_suplier_name"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <EditText
+                                        android:id="@+id/ed_search"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginEnd="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:hint="Search"
+                                        android:lines="1"
+                                        android:maxLines="1"
+                                        android:inputType="text|textNoSuggestions"
+                                        android:paddingStart="20dp"
+                                        android:paddingTop="10dp"
+                                        android:paddingBottom="10dp"
+                                        android:background="@null"
+                                        android:textColor="@color/white"
+                                        android:textColorHint="@color/white"
+                                        android:textSize="18sp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/search_btn"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"/>
+
+                                    <ImageView
+                                        android:id="@+id/search_btn"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ic_magnifier"
+                                        android:textAllCaps="false"
+                                        android:textColor="@color/blue"
+                                        app:layout_constraintStart_toEndOf="@id/ed_search"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/dock_queue_rc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/cv_header"
+                            tools:itemCount="5"
+                            tools:listitem="@layout/home_dock_item_layout" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardview_right"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:layout_margin="15dp"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cv_truck_list"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/leveler_rc"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            tools:itemCount="5"
+                            android:paddingTop="10dp"
+                            tools:listitem="@layout/home_leveler_item_layout"
+                            app:layout_constraintVertical_weight="0.8"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toTopOf="@id/cl_rgp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_rgp"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            app:layout_constraintVertical_weight="0.2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/leveler_rc"
+                            >
+
+                            <View
+                                android:id="@+id/cl_right_view1"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="@drawable/home_rpg_tv_gradient_left"
+                                app:layout_constraintTop_toTopOf="@id/tv_rgp"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_rgp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/tv_rgp"/>
+                            <TextView
+                                android:id="@+id/tv_rgp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="RGP Location"
+                                android:textSize="24sp"
+                                android:textColor="@color/blue"
+                                android:textAlignment="center"
+                                app:layout_constraintStart_toEndOf="@id/cl_right_view1"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/cl_right_view2"
+                                />
+                            <View
+                                android:id="@+id/cl_right_view2"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="@drawable/home_rpg_tv_gradient_right"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="@id/tv_rgp"
+                                app:layout_constraintBottom_toBottomOf="@id/tv_rgp"
+                                app:layout_constraintStart_toEndOf="@+id/tv_rgp" />
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rc_rgp"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_rgp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                tools:listitem="@layout/rgp_list_item_layout"
+                                />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+               <!-- <com.google.android.material.button.MaterialButton
+                    android:id="@+id/startUnloadBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    app:elevation="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:drawableEnd="@drawable/ic_long_forward_arrow_white"
+                    android:text="Start unloading"
+                    android:textAllCaps="false"
+                    android:textSize="20sp"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cv_truck_list"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview_right" />-->
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clParentBottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bottom_left"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- <View
+                     android:id="@+id/viewDiv"
+                     android:layout_width="0dp"
+                     android:layout_height="0dp"
+                     app:layout_constraintHorizontal_weight="0.75"
+                     app:layout_constraintEnd_toStartOf="@id/startUnloadBtn"
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"/>-->
+                <!--<com.google.android.material.button.MaterialButton
+                    android:id="@+id/startUnloadBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Start unloading"
+                    app:cornerRadius="10dp"
+                    android:textAllCaps="false"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="30sp"
+                    app:layout_constraintHorizontal_weight="0.25"
+                    android:backgroundTint="@color/blue"
+                    app:layout_constraintStart_toEndOf="@id/viewDiv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:drawableEnd="@drawable/ic_long_forward_arrow_white" />-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

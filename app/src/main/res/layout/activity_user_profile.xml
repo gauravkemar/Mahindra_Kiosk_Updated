@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/home_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/clParentTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:cardElevation="20dp"
+                    app:cardUseCompatPadding="false"
+                    app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_weight="0.10">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toTopOf="@id/clParentMiddle"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_weight="0.10">
+
+
+                        <ImageView
+                            android:id="@+id/mahindra_ut_id"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/logo_latest"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/supervisor_name_time_tv"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/supervisor_name_time_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/clDock"
+                            app:layout_constraintStart_toEndOf="@id/mahindra_ut_id"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_supervisor_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:visibility="gone"
+                                android:text="Mayur Salunkhe"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/medium_text"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/tv_date_time"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_chainStyle="packed" />
+
+                            <TextView
+                                android:id="@+id/tv_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="10dp"
+                                android:text="28-06-2023 11:30AM"
+                                android:textColor="@color/grey"
+                                android:textSize="@dimen/medium_text"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_supervisor_name" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clDock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/curve_header"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:id="@+id/tv_dock_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:minWidth="100dp"
+                                android:paddingStart="40dp"
+                                android:paddingEnd="40dp"
+                                android:text="Dock 11"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_big_size_1"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/dock_white_dash"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/dock_white_dash"
+                                android:layout_width="0dp"
+                                android:layout_height="1dp"
+                                android:background="#FFF"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_shop_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:minWidth="100dp"
+                                android:text="Shop R"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_big_size_2"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/dock_white_dash"
+
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clParentMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/clParentBottom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clParentTop"
+                    app:layout_constraintVertical_weight="0.85">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cv_truck_list"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cardview_right"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ut_symbol" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_child_left_1_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clInfoName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/mcvProfile1"
+                                >
+                                <TextView
+                                    android:id="@+id/tvEmpInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="EMP INFO"
+                                     android:drawablePadding="10dp"
+                                    android:padding="10dp"
+                                    android:textSize="@dimen/medium_text"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintHorizontal_weight="0.4"
+                                    android:drawableStart="@drawable/ic_emp_info_black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/viewSide1"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    />
+                                <View
+                                    android:id="@+id/viewSide1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintHorizontal_weight="0.6"
+                                    android:background="@drawable/home_rpg_tv_gradient_right"
+                                    app:layout_constraintStart_toEndOf="@+id/tvEmpInfo"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvProfile1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/clInfoName"
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvId"
+                                        android:layout_width="0dp"
+                                        android:padding="10dp"
+                                        android:text="ID"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textAlignment="center"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintHorizontal_weight="0.3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/view1"
+                                        />
+
+                                    <View
+                                        android:id="@+id/view1"
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/lighter_grey"
+                                        app:layout_constraintHorizontal_weight="0.02"
+                                       app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/tvId"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvIdValue"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <TextView
+                                        android:id="@+id/tvIdValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:padding="10dp"
+                                        app:layout_constraintHorizontal_weight="0.68"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/view1"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvProfile2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintTop_toBottomOf="@+id/mcvProfile1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvRole"
+                                        android:layout_width="0dp"
+                                        android:padding="10dp"
+                                        android:text="User Role"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textAlignment="center"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintHorizontal_weight="0.3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/view2"
+                                        />
+
+                                    <View
+                                        android:id="@+id/view2"
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/lighter_grey"
+                                        app:layout_constraintHorizontal_weight="0.02"
+                                       app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/tvRole"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvRoleValue"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <TextView
+                                        android:id="@+id/tvRoleValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:padding="10dp"
+                                        app:layout_constraintHorizontal_weight="0.68"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/view2"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/clUserInfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:layout_constraintTop_toBottomOf="@id/mcvProfile2"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintBottom_toTopOf="@id/mcvProfile3"
+                                >
+                                <TextView
+                                    android:id="@+id/tvUserInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="USER INFO"
+                                    android:drawablePadding="10dp"
+                                    android:padding="10dp"
+                                    android:textSize="@dimen/medium_text"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintHorizontal_weight="0.4"
+                                    android:drawableStart="@drawable/ic_user_info_black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/viewSide2"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    />
+                                <View
+                                    android:id="@+id/viewSide2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="1dp"
+                                    app:layout_constraintHorizontal_weight="0.6"
+                                    android:background="@drawable/home_rpg_tv_gradient_right"
+                                    app:layout_constraintStart_toEndOf="@+id/tvUserInfo"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvProfile3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintTop_toBottomOf="@+id/clUserInfo"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvUserName"
+                                        android:layout_width="0dp"
+                                        android:padding="10dp"
+                                        android:text="User Name"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textAlignment="center"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintHorizontal_weight="0.3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/view3"
+                                        />
+
+                                    <View
+                                        android:id="@+id/view3"
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/lighter_grey"
+                                        app:layout_constraintHorizontal_weight="0.02"
+                                       app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/tvUserName"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvUserNameValue"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <TextView
+                                        android:id="@+id/tvUserNameValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:padding="10dp"
+                                        app:layout_constraintHorizontal_weight="0.68"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/view3"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvProfile4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintTop_toBottomOf="@+id/mcvProfile3"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvFirstName"
+                                        android:layout_width="0dp"
+                                        android:padding="10dp"
+                                        android:text="First Name"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textAlignment="center"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintHorizontal_weight="0.3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/view4"
+                                        />
+
+                                    <View
+                                        android:id="@+id/view4"
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/lighter_grey"
+                                        app:layout_constraintHorizontal_weight="0.02"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/tvFirstName"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvFirstNameValue"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <TextView
+                                        android:id="@+id/tvFirstNameValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:padding="10dp"
+                                        app:layout_constraintHorizontal_weight="0.68"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/view4"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvProfile5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="2dp"
+                                app:layout_constraintTop_toBottomOf="@+id/mcvProfile4"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="10dp"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvLastName"
+                                        android:layout_width="0dp"
+                                        android:padding="10dp"
+                                        android:text="Last Name"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textAlignment="center"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintHorizontal_weight="0.3"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@id/view5"
+                                        />
+
+                                    <View
+                                        android:id="@+id/view5"
+                                        android:layout_width="1.5dp"
+                                        android:layout_height="0dp"
+                                        android:background="@color/lighter_grey"
+                                        app:layout_constraintHorizontal_weight="0.02"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintStart_toEndOf="@+id/tvLastName"
+                                        app:layout_constraintEnd_toStartOf="@+id/tvLastNameValue"
+                                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                    <TextView
+                                        android:id="@+id/tvLastNameValue"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/medium_text"
+                                        android:padding="10dp"
+                                        app:layout_constraintHorizontal_weight="0.68"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintStart_toEndOf="@id/view5"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview_right"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="15dp"
+                        android:background="@color/white"
+                        android:padding="10dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp"
+                        app:cardUseCompatPadding="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        app:layout_constraintStart_toEndOf="@id/cv_truck_list"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                >
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/clContactInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toTopOf="@id/mcvProfile6"
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvUserContactInfo"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="CONTACTS"
+                                        android:drawablePadding="10dp"
+                                        android:padding="10dp"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintHorizontal_weight="0.4"
+                                        android:drawableStart="@drawable/ic_user_contact_black"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/viewSide3"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+                                    <View
+                                        android:id="@+id/viewSide3"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        app:layout_constraintHorizontal_weight="0.6"
+                                        android:background="@drawable/home_rpg_tv_gradient_right"
+                                        app:layout_constraintStart_toEndOf="@+id/tvUserContactInfo"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/mcvProfile6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/clContactInfo"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    >
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+
+                                        >
+                                        <TextView
+                                            android:id="@+id/tvEmailAddress"
+                                            android:layout_width="0dp"
+                                            android:padding="10dp"
+                                            android:text="Email-ID"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:textAlignment="center"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintHorizontal_weight="0.3"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@id/view6"
+                                            />
+
+                                        <View
+                                            android:id="@+id/view6"
+                                            android:layout_width="1.5dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/lighter_grey"
+                                            app:layout_constraintHorizontal_weight="0.02"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvEmailAddress"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvEmailAddressValue"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:id="@+id/tvEmailAddressValue"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:padding="10dp"
+                                            app:layout_constraintHorizontal_weight="0.68"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@id/view6"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/mcvProfile7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/mcvProfile6"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toTopOf="@+id/clUserSettings"
+                                    >
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+
+                                        >
+                                        <TextView
+                                            android:id="@+id/tvMobileNumber"
+                                            android:layout_width="0dp"
+                                            android:padding="10dp"
+                                            android:text="Mobile-NO"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:textAlignment="center"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintHorizontal_weight="0.3"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toStartOf="@id/view7"
+                                            />
+
+                                        <View
+                                            android:id="@+id/view7"
+                                            android:layout_width="1.5dp"
+                                            android:layout_height="0dp"
+                                            android:background="@color/lighter_grey"
+                                            app:layout_constraintHorizontal_weight="0.02"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/tvMobileNumber"
+                                            app:layout_constraintEnd_toStartOf="@+id/tvMobileNumberValue"
+                                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                        <TextView
+                                            android:id="@+id/tvMobileNumberValue"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:text=""
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:padding="10dp"
+                                            app:layout_constraintHorizontal_weight="0.68"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintStart_toEndOf="@id/view7"
+                                            />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/clUserSettings"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/mcvProfile7"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toTopOf="@+id/mcvProfile8"
+
+                                    >
+                                    <TextView
+                                        android:id="@+id/tvUserSettings"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="SETTINGS"
+                                        android:drawablePadding="10dp"
+                                        android:padding="10dp"
+                                        android:textSize="@dimen/medium_text"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/black"
+                                        app:layout_constraintHorizontal_weight="0.4"
+                                        android:drawableStart="@drawable/ic_user_settings_black"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/viewSide4"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+                                    <View
+                                        android:id="@+id/viewSide4"
+                                        android:layout_width="0dp"
+                                        android:layout_height="1dp"
+                                        app:layout_constraintHorizontal_weight="0.6"
+                                        android:background="@drawable/home_rpg_tv_gradient_right"
+                                        app:layout_constraintStart_toEndOf="@+id/tvUserSettings"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/mcvProfile8"
+                                    android:clickable="true"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/clUserSettings"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    >
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+
+                                        >
+                                        <TextView
+                                            android:id="@+id/tvForgotPassword"
+                                            android:layout_width="wrap_content"
+                                            android:padding="10dp"
+                                            android:text="Change Password"
+                                            android:textStyle="bold"
+                                            android:drawableStart="@drawable/ic_forgot_password"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:drawablePadding="10dp"
+                                            android:textAlignment="center"
+                                            android:layout_height="wrap_content"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/mcvProfile9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:clickable="true"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="2dp"
+                                    app:layout_constraintTop_toBottomOf="@+id/mcvProfile8"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+
+                                    >
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+
+                                        >
+                                        <TextView
+                                            android:id="@+id/tvLogout"
+                                            android:layout_width="wrap_content"
+                                            android:padding="10dp"
+                                            android:text="Logout"
+                                            android:textStyle="bold"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/medium_text"
+                                            android:drawablePadding="10dp"
+                                            android:textAlignment="center"
+                                            android:layout_height="wrap_content"
+                                            android:drawableStart="@drawable/ic_logout_black"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clParentBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bottom_left"
+                        android:textColor="@color/light_grey"
+                        android:textSize="@dimen/small_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

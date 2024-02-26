@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="0.30"
+            app:layout_constraintEnd_toStartOf="@id/material1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/material1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#DBF1F8"
+            app:layout_constraintHorizontal_weight="0.40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/view1"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@+id/view1"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/tv_tcp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TCP Settings"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintHorizontal_weight="0.9"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/close_dialogue"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <ImageButton
+                    android:id="@+id/close_dialogue"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:layout_constraintHorizontal_weight="0.1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_cancel_black"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tcp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_tcp"/>
+
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tcp"/>
+
+                <TextView
+                    android:id="@+id/tv_tcp_status_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Current Status : "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_tcp_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Connected"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toEndOf="@+id/tv_tcp_status_label"
+                    app:layout_constraintTop_toBottomOf="@+id/view_divider"
+                    />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_tcp_status_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+                    <LinearLayout
+                        android:id="@+id/radioGroup"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                       android:layout_margin="10dp"
+
+                        app:layout_constraintStart_toStartOf="parent"                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupTcp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="1dp"
+                            android:background="@drawable/round_border_blue"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioBtn1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_selector_left"
+                                android:button="@android:color/transparent"
+                                android:gravity="center"
+                                android:text="Connect"
+                                android:textColor="@drawable/radiobuttonstate" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/radioBtn2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/radio_btn_selector_right_red"
+                                android:button="@android:color/transparent"
+                                android:gravity="center"
+                                android:text="Disconnect"
+                                android:textColor="@drawable/radiobuttonstate" />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="0.30"
+            app:layout_constraintStart_toEndOf="@id/material1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

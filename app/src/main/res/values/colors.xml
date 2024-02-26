@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FF0000</color>
+    <color name="red_mahindra">#ee3667</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#242529</color>
+    <color name="light_grey">#555557</color>
+    <color name="lighter_grey">#d9d9d9</color>
+    <color name="lighter_grey_50">#80D9D9D9</color>
+    <color name="yellow">#fdf179</color>
+    <color name="orange">#f2663f</color>
+    <color name="light_orange">#FD9500</color>
+    <color name="bg">#f0f1f1</color>
+    <color name="blue">#0054a6</color>
+    <color name="green">#00a651</color>
+    <color name="bright_green">#10c007</color>
+    <color name="lighter_green">#e5fcf0</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="light_red">#FA8484</color>
+    <color name="light_green">#9AFF85</color>
+    <color name="light_blue">#4D72D2FF</color>
+    <color name="lighter_blue">#01243A</color>
+    <color name="lighter_red">#FF7D7D</color>
+
+
+    <color name="button_unselected">#E0E0E0</color>
+    <color name="button_text_unselected">#000000</color>
+    <color name="button_stroke_unselected">#000000</color>
+    <color name="button_selected">#2962FF</color>
+    <color name="button_text_selected">#FFFFFF</color>
+    <color name="button_stroke_selected">#FFFFFF</color>
+
+
+    <color name="radio_normal_color">#10c007</color>
+    <color name="radio_excess_color">#358bba</color>
+    <color name="radio_shortage_color">#FF0000</color>
+
+
+    <color name="mahindra_logo_color">#e41636</color>
+
+
+
+
+
+</resources>
