@@ -133,7 +133,7 @@ class HomeLevelerAdapter: RecyclerView.Adapter<HomeLevelerAdapter.ViewHolder>() 
 
             // Set a listener to release the media player when playback is complete
             mediaPlayer.setOnCompletionListener {
-                mediaPlayer.release()
+               // mediaPlayer.release()
             }
         }
     }

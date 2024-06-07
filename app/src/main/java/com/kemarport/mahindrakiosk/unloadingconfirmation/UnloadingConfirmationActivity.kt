@@ -383,11 +383,7 @@ class UnloadingConfirmationActivity : AppCompatActivity() {
                             isFirstItemSelected = false
                         }
                         selectedReasonSpinnerString = spinnerItems[position]
-                        Toast.makeText(
-                            this@UnloadingConfirmationActivity,
-                            getString(R.string.selected_item) + " " +
-                                    "" + languages[position], Toast.LENGTH_SHORT
-                        ).show()
+
                     }
 
                     override fun onNothingSelected(parent: AdapterView<*>) {
@@ -698,7 +694,6 @@ class UnloadingConfirmationActivity : AppCompatActivity() {
                                     )
                                 }
                             } else {
-
                                 viewModel.unloadingComplete(
                                     token!!, Constants.baseUrl2, VehicleUnloadingRequest(
                                         getDeviceIPAddress() ?: "0.0.0.0",
@@ -716,10 +711,8 @@ class UnloadingConfirmationActivity : AppCompatActivity() {
                                         unloadByMatadiSwitch
                                     )
                                 )
-
                             }
                         } else {
-
 
                             viewModel.unloadingComplete(
                                 token!!,
